@@ -27,6 +27,14 @@ Names = FileRead()                                 # Run the above Function to g
 #     ------------------- FUNCTION TO FIND THE NAME  -----------------------------------------------------------
 
 
+def findName(ID):
+    if ID > 0:
+        NameString = Names[ID-1]
+    else:
+        NameString = "Não encontrado";
+
+    return NameString
+
 def ID2Name(ID, conf):
     if ID > 0:
         NameString = "Name: " + Names[ID-1] + " Distance: " + (str(round(conf)) )                                # Find the Name using the index of the ID

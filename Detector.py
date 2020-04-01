@@ -10,9 +10,9 @@ camera = cv2.VideoCapture(0)
 while (True):
     conectado, imagem = camera.read()
     imagemCinza = cv2.cvtColor(imagem, cv2.COLOR_BGR2GRAY)
-    facesDetectadas = detectorFace.detectMultiScale(imagemCinza,
-                                                    scaleFactor=1.5,
-                                                    minSize=(30,30))
+
+    
+    facesDetectadas = detectorFace.detectMultiScale(imagemCinza, 1.3, 5)
 
     for (x,y,l,a) in facesDetectadas:
         imagemFace = cv2.resize(imagemCinza[y:y +a, x:x + l], (largura, altura))
